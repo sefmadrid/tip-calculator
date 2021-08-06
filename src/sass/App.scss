@@ -1,0 +1,131 @@
+@use 'color';
+$dollar: url('../images/icon-dollar.svg');
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+#calculator {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+#calculator .field {
+  margin-bottom: 30px;
+}
+
+#calculator label {
+  color: color.$dark-grayish-cyan-1;
+  font-weight: 700;
+}
+
+#calculator input {
+  height: 40px;
+  background: color.$light-grayish-cyan-2;
+  border: 0;
+  border-radius: 5px;
+  text-align: right;
+  color: color.$black;
+  font-size: 24px;
+  padding-right: 13px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+#calculator #tip-percent-options-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#calculator #tip-percent-options-group input[type="radio"]{
+  display: none;
+}
+
+#calculator #tip-percent-options-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+#calculator #tip-percent-options-group .tip-percent-options{
+  width: 48%;
+  margin-bottom: 15px;
+}
+
+#calculator  #tip-percent-options-group .tip-percent-options.custom-option input{
+  width: 100%;
+  height: 50px;
+}
+
+#calculator #tip-percent-options-group input[type="radio"]+label {
+  height: 50px;
+  width: 100%;
+  background: color.$black;
+  color: color.$white;
+  border-radius: 5px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  line-height: 50px;
+  font-size: 24px;
+}
+
+#calculator #tip-percent-options-group input[type="radio"]:checked+label{
+  background: color.$strong-cyan;
+  color: color.$black;
+}
+
+.icon-input {
+  display: block;
+  position: relative;
+}
+
+.icon-input .icon{
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  height: 15px;
+}
+
+#calculator #total{
+  background: color.$black;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#calculator #total .text{
+  color: color.$white;
+  font-weight: 700;
+}
+
+#calculator #total .text small{
+  display: block;
+  color: color.$dark-grayish-cyan-2;
+}
+
+#calculator #total .total-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#calculator #total .value {
+  font-size: 30px;
+  font-weight: 700;
+  color: color.$strong-cyan;
+}
+
+#calculator #total #reset-button {
+  width: 100%;
+  background: #26c0ab;
+  border-radius: 5px;
+  border: 0;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  color: color.$black;
+}
