@@ -8,7 +8,7 @@ import IconInput from './components/IconInput';
 import RadioOption from "./components/RadioOption";
 import TotalSection from "./components/TotalSection";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
         <Header logo={logo}/>
