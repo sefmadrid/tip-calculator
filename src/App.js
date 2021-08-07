@@ -32,7 +32,7 @@ function App() {
             </div>
             <div id="total">
                 <TotalSection text="Tip Amount" value="0.00"/>
-                <TotalSection text="Total" value="0.00"/>
+                <TotalSection id="total-section" text="Total" value="0.00"/>
                 <button id="reset-button">RESET</button>
             </div>
         </div>

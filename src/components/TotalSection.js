@@ -1,10 +1,10 @@
 import React from 'react';
 
 const TotalSection = ({
-    text, value
+    text, value, id
 }) => {
     return (
-        <div className="total-section">
+        <div id={id ?? ''} className="total-section">
             <span className="text">{text}
                 <small>/ person</small>
             </span>
