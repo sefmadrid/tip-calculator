@@ -6,6 +6,7 @@ import personIcon from './images/icon-person.svg';
 import Header from './components/Header';
 import IconInput from './components/IconInput';
 import RadioOption from "./components/RadioOption";
+import TotalSection from "./components/TotalSection";
 
 function App() {
   return (
@@ -30,22 +31,8 @@ function App() {
                 <IconInput icon={personIcon} label="Number of People" id="number-of-people" name="number-of-people" placeholder="0"/>
             </div>
             <div id="total">
-                <div className="total-section">
-                    <span className="text">Tip Amount
-                        <small>/ person</small>
-                    </span>
-                    <span className="value">
-                        $0.00
-                    </span>
-                </div>
-                <div className="total-section" id="total-section">
-                    <span className="text">Total
-                        <small>/ person</small>
-                    </span>
-                    <span className="value">
-                        $0.00
-                    </span>
-                </div>
+                <TotalSection text="Tip Amount" value="0.00"/>
+                <TotalSection text="Total" value="0.00"/>
                 <button id="reset-button">RESET</button>
             </div>
         </div>
