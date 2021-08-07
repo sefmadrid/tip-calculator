@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import './sass/App.scss';
 import logo from './images/logo.svg';
 import dollarIcon from './images/icon-dollar.svg';
@@ -9,23 +11,33 @@ import TotalSection from "./components/TotalSection";
 import TipPercentOptions from "./components/TipPercentOptions";
 
 const App = () => {
-  return (
-    <div className="App">
-        <Header logo={logo}/>
-        <div id="calculator">
-            <div id="input">
-                <IconInput icon={dollarIcon} label="Bill" id="bill" name="bill" placeholder="0"/>
-                <TipPercentOptions/>
-                <IconInput icon={personIcon} label="Number of People" id="number-of-people" name="number-of-people" placeholder="0"/>
-            </div>
-            <div id="total">
-                <TotalSection text="Tip Amount" value="0.00"/>
-                <TotalSection id="total-section" text="Total" value="0.00"/>
-                <button id="reset-button">RESET</button>
+    const [bill, setBill] = useState(12);
+    const [tip_percent, setTipPercent] = useState(0);
+    const [number_of_people, setNumberOfPeople] = useState(13);
+
+    const reset = () => {
+        setBill(0);
+        setTipPercent(0);
+        setNumberOfPeople(0);
+    }
+
+    return (
+        <div className="App">
+            <Header logo={logo}/>
+            <div id="calculator">
+                <div id="input">
+                    <IconInput icon={dollarIcon} label="Bill" id="bill" name="bill" placeholder="0" value={bill} onChange={setBill}/>
+                    <TipPercentOptions value={tip_percent} onChange={setTipPercent}/>
+                    <IconInput icon={personIcon} label="Number of People" id="number-of-people" name="number-of-people" placeholder="0" value={number_of_people} onChange={setNumberOfPeople}/>
+                </div>
+                <div id="total">
+                    <TotalSection text="Tip Amount" value="0.00"/>
+                    <TotalSection id="total-section" text="Total" value="0.00"/>
+                    <button id="reset-button" onClick={reset}>RESET</button>
+                </div>
             </div>
         </div>
-    </div>
-  );
+    );
 }
 
 export default App;
