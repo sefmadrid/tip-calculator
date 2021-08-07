@@ -144,6 +144,10 @@ header {
 }
 
 @media(min-width:900px){
+  header {
+    margin: 100px auto 50px auto;
+  }
+
   #calculator {
     display: flex;
     justify-content: space-between;
