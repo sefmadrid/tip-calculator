@@ -11,13 +11,13 @@ import TotalSection from "./components/TotalSection";
 import TipPercentOptions from "./components/TipPercentOptions";
 
 const App = () => {
-    const [bill, setBill] = useState(12);
-    const [tip_percent, setTipPercent] = useState(0);
-    const [number_of_people, setNumberOfPeople] = useState(13);
+    const [bill, setBill] = useState(0);
+    const [tip_percent, setTipPercent] = useState('');
+    const [number_of_people, setNumberOfPeople] = useState(0);
 
     const reset = () => {
         setBill(0);
-        setTipPercent(0);
+        setTipPercent('');
         setNumberOfPeople(0);
     }
 
