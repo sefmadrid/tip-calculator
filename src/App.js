@@ -15,7 +15,7 @@ function App() {
                     <label htmlFor="bill">Bill</label>
                     <span className="icon-input">
                         <img className="icon" src={dollarIcon} alt="dollar icon"/>
-                        <input type="text" name="bill" id="bill" defaultValue={0}/>
+                        <input type="text" name="bill" id="bill" placeholder="0"/>
                     </span>
                 </div>
                 <div className="field">
@@ -50,7 +50,7 @@ function App() {
                     <label htmlFor="number-of-people">Number of People</label>
                     <span className="icon-input">
                             <img className="icon" src={personIcon} alt="person icon"/>
-                            <input type="text" name="number-of-people" id="number-of-people" defaultValue={0}/>
+                            <input type="text" name="number-of-people" id="number-of-people" placeholder="0"/>
                         </span>
                 </div>
             </div>
@@ -60,15 +60,15 @@ function App() {
                         <small>/ person</small>
                     </span>
                     <span className="value">
-                        $4.27
+                        $0.00
                     </span>
                 </div>
-                <div className="total-section">
+                <div className="total-section" id="total-section">
                     <span className="text">Total
                         <small>/ person</small>
                     </span>
                     <span className="value">
-                        $32.79
+                        $0.00
                     </span>
                 </div>
                 <button id="reset-button">RESET</button>
