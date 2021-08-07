@@ -13,7 +13,7 @@ function App() {
         <Header logo={logo}/>
         <div id="calculator">
             <div id="input">
-                <IconInput logo={dollarIcon} label="Bill" id="bill" name="bill" placeholder="0"/>
+                <IconInput icon={dollarIcon} label="Bill" id="bill" name="bill" placeholder="0"/>
                 <div className="field">
                     <label htmlFor="tip-percent">Select Tip %</label>
                     <div id="tip-percent-options-group">
@@ -27,7 +27,7 @@ function App() {
                         </span>
                     </div>
                 </div>
-                <IconInput logo={personIcon} label="Number of People" id="number-of-people" name="number-of-people" placeholder="0"/>
+                <IconInput icon={personIcon} label="Number of People" id="number-of-people" name="number-of-people" placeholder="0"/>
             </div>
             <div id="total">
                 <div className="total-section">
