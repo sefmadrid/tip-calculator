@@ -24,6 +24,11 @@ header {
   margin-bottom: 30px;
 }
 
+#calculator .field > label{
+  margin-bottom: 10px;
+  display: block;
+}
+
 #calculator label {
   color: color.$dark-grayish-cyan-1;
   font-weight: 700;
