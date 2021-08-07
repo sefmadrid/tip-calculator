@@ -5,7 +5,7 @@ import personIcon from './images/icon-person.svg';
 
 import Header from './components/Header';
 import IconInput from './components/IconInput';
-
+import RadioOption from "./components/RadioOption";
 
 function App() {
   return (
@@ -17,26 +17,11 @@ function App() {
                 <div className="field">
                     <label htmlFor="tip-percent">Select Tip %</label>
                     <div id="tip-percent-options-group">
-                        <span className="tip-percent-options radio-option">
-                            <input type="radio" id="five_percent" name="tip-percent" value={5}/>
-                            <label htmlFor="five_percent">5%</label>
-                        </span>
-                        <span className="tip-percent-options radio-option">
-                            <input type="radio" id="ten_percent" name="tip-percent" value={10}/>
-                            <label htmlFor="ten_percent">10%</label>
-                        </span>
-                        <span className="tip-percent-options radio-option">
-                            <input type="radio" id="fifteen_percent" name="tip-percent" value={15}/>
-                            <label htmlFor="fifteen_percent">15%</label>
-                        </span>
-                        <span className="tip-percent-options radio-option">
-                            <input type="radio" id="twenty_five_percent" name="tip-percent" value={25}/>
-                            <label htmlFor="twenty_five_percent">25%</label>
-                        </span>
-                        <span className="tip-percent-options radio-option">
-                            <input type="radio" id="fifty_percent" name="tip-percent" value={50}/>
-                            <label htmlFor="fifty_percent">50%</label>
-                        </span>
+                        <RadioOption id="five_percent" name="tip_percent" value={5} label="5%" className="tip-percent-options"/>
+                        <RadioOption id="ten_percent" name="tip_percent" value={10} label="10%" className="tip-percent-options"/>
+                        <RadioOption id="fifteen_percent" name="tip_percent" value={15} label="15%" className="tip-percent-options"/>
+                        <RadioOption id="twenty_five_percent" name="tip_percent" value={25} label="25%" className="tip-percent-options"/>
+                        <RadioOption id="fifty_percent" name="tip_percent" value={50} label="50%" className="tip-percent-options"/>
                         <span className="tip-percent-options custom-option">
                             <input type="text" placeholder="Custom"/>
                         </span>
