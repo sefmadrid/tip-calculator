@@ -42,9 +42,9 @@ const App = () => {
             <Header logo={logo}/>
             <div id="calculator">
                 <div id="input">
-                    <IconInput icon={dollarIcon} label="Bill" id="bill" name="bill" placeholder="0" value={bill} onChange={setBill}/>
+                    <IconInput icon={dollarIcon} label="Bill" id="bill" name="bill" placeholder="0" value={bill} onChange={setBill} alt="Dollar sign"/>
                     <TipPercentOptions value={tip_percent} onChange={setTipPercent}/>
-                    <IconInput icon={personIcon} label="Number of People" id="number-of-people" name="number-of-people" placeholder="0" value={number_of_people} onChange={setNumberOfPeople}/>
+                    <IconInput icon={personIcon} label="Number of People" id="number-of-people" name="number-of-people" placeholder="0" value={number_of_people} onChange={setNumberOfPeople} alt="Person"/>
                 </div>
                 <div id="total">
                     <TotalSection text="Tip Amount" value={tip_per_person}/>
