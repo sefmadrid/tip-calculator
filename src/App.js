@@ -15,13 +15,13 @@ const App = () => {
     const [tip_percent, setTipPercent] = useState('');
     const [number_of_people, setNumberOfPeople] = useState('');
 
-    const [total_tip, setTotalTip] = useState('0.00');
     const [tip_per_person, setTipPerPerson] = useState('0.00');
+    const [total_per_person, setTotalPerPerson] = useState('0.00');
 
     useEffect(() => {
-        setTotalTip(computeTotalTip(bill, isNaN(tip_percent) ? 0 : tip_percent))
-        setTipPerPerson(computeTipPerPerson(total_tip, number_of_people))
-    }, [bill, tip_percent, number_of_people, total_tip])
+        setTipPerPerson(computeTipPerPerson(bill, isNaN(tip_percent) ? 0 : tip_percent, number_of_people))
+        setTotalPerPerson(computeTotalPerPerson(bill, tip_per_person, number_of_people))
+    }, [bill, tip_percent, number_of_people, tip_per_person])
 
     const reset = () => {
         setBill('');
@@ -29,17 +29,12 @@ const App = () => {
         setNumberOfPeople('');
     }
 
-    const computeTotalTip = (bill, tip_percent) => {
-        return ((tip_percent / 100) * bill).toFixed(2)
+    const computeTipPerPerson = (bill, tip_percent, number_of_people) => {
+        return (((tip_percent / 100) * bill) / number_of_people).toFixed(2)
     }
 
-    const computeTipPerPerson = (total_tip, number_of_people) => {
-        if(!total_tip || !number_of_people)
-        {
-            return (0).toFixed(2)
-        }
-
-        return (total_tip / number_of_people).toFixed(2)
+    const computeTotalPerPerson = (bill, tip_per_person, number_of_people) => {
+        return (Number((bill / number_of_people)) + Number(tip_per_person)).toFixed(2)
     }
 
     return (
@@ -52,8 +47,8 @@ const App = () => {
                     <IconInput icon={personIcon} label="Number of People" id="number-of-people" name="number-of-people" placeholder="0" value={number_of_people} onChange={setNumberOfPeople}/>
                 </div>
                 <div id="total">
-                    <TotalSection text="Tip Amount" value={total_tip}/>
-                    <TotalSection id="total-section" text="Total" value={tip_per_person}/>
+                    <TotalSection text="Tip Amount" value={tip_per_person}/>
+                    <TotalSection id="total-section" text="Total" value={total_per_person}/>
                     <button id="reset-button" onClick={reset}>RESET</button>
                 </div>
             </div>
