@@ -7,7 +7,7 @@ const TipPercentOptions = ({
     const [is_custom_value, setIfCustomValue] = useState(false);
 
     const changeValue = (e) => {
-        onChange(Number(e.target.value))
+        onChange(e.target.value)
     }
 
     const resetTipPercent = () => {
