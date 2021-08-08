@@ -49,7 +49,7 @@ const App = () => {
                 <div id="total">
                     <TotalSection text="Tip Amount" value={tip_per_person}/>
                     <TotalSection id="total-section" text="Total" value={total_per_person}/>
-                    <button id="reset-button" onClick={reset}>RESET</button>
+                    <button id="reset-button" onClick={reset} disabled={ bill === '' && tip_percent === '' && number_of_people === '' }>RESET</button>
                 </div>
             </div>
         </div>

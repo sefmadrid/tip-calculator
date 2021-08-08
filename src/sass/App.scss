@@ -172,6 +172,11 @@ input[type=number] {
   font-size: 20px;
   font-weight: 700;
   color: color.$black;
+  cursor: pointer;
+}
+
+#calculator #total #reset-button:disabled{
+  background: rgb(13, 104, 109);
 }
 
 #calculator #tip-percent-options-group .tip-percent-options:nth-child(5),
