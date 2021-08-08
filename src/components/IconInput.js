@@ -4,7 +4,7 @@ const IconInput = ({
     label, icon, placeholder, id, name, alt, value, onChange
 }) => {
     const updateValue = (e) => {
-        onChange(Number(e.target.value));
+        onChange(e.target.value);
     }
 
     return (

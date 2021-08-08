@@ -11,12 +11,12 @@ import TotalSection from "./components/TotalSection";
 import TipPercentOptions from "./components/TipPercentOptions";
 
 const App = () => {
-    const [bill, setBill] = useState(0);
+    const [bill, setBill] = useState('');
     const [tip_percent, setTipPercent] = useState('');
-    const [number_of_people, setNumberOfPeople] = useState(0);
+    const [number_of_people, setNumberOfPeople] = useState('');
 
-    const [total_tip, setTotalTip] = useState(0);
-    const [tip_per_person, setTipPerPerson] = useState(0);
+    const [total_tip, setTotalTip] = useState('0.00');
+    const [tip_per_person, setTipPerPerson] = useState('0.00');
 
     useEffect(() => {
         setTotalTip(computeTotalTip(bill, isNaN(tip_percent) ? 0 : tip_percent))
@@ -24,9 +24,9 @@ const App = () => {
     }, [bill, tip_percent, number_of_people, total_tip])
 
     const reset = () => {
-        setBill(0);
+        setBill('');
         setTipPercent('');
-        setNumberOfPeople(0);
+        setNumberOfPeople('');
     }
 
     const computeTotalTip = (bill, tip_percent) => {

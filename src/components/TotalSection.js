@@ -9,7 +9,7 @@ const TotalSection = ({
                 <small>/ person</small>
             </span>
             <span className="value">
-                ${value}
+                ${isNaN(value) || !isFinite(value) ? '0.00' : value}
             </span>
         </div>
     );
