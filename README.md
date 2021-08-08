@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/sefmadrid/tip-calculator](https://github.com/sefmadrid/tip-calculator)
+- Live Site URL: [https://sefmadrid-tip-calculator.netlify.app](https://sefmadrid-tip-calculator.netlify.app)
 
 ## My process
 
