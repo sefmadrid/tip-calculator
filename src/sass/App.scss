@@ -59,7 +59,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-#calculator input[type="number"]:hover,
+#calculator input[type="number"]:hover {
+  border: 2px color.$water-leaf solid;
+}
+
 #calculator input[type="number"]:active,
 #calculator input[type="number"]:focus{
   border: 2px color.$strong-cyan solid;
@@ -97,6 +100,11 @@ input[type=number] {
   justify-content: center;
   line-height: 50px;
   cursor: pointer;
+}
+
+#calculator #tip-percent-options-group input[type="radio"]+label:hover{
+  background: color.$water-leaf;
+  color: color.$black;
 }
 
 #calculator #tip-percent-options-group input[type="radio"]:checked+label{
@@ -176,8 +184,12 @@ input[type=number] {
   cursor: pointer;
 }
 
+#calculator #total #reset-button:hover{
+  background: color.$water-leaf;
+}
+
 #calculator #total #reset-button:disabled{
-  background: rgb(13, 104, 109);
+  background: color.$mosque;
 }
 
 #calculator #tip-percent-options-group .tip-percent-options:nth-child(5),
