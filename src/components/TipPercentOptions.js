@@ -33,7 +33,7 @@ const TipPercentOptions = ({
                 <RadioOption id="twenty_five_percent" name="tip_percent" value={25} label="25%" className="tip-percent-options" tip_percent_value={value} onChange={changeValue} onClick={fixedValueSelected}/>
                 <RadioOption id="fifty_percent" name="tip_percent" value={50} label="50%" className="tip-percent-options" tip_percent_value={value} onChange={changeValue} onClick={fixedValueSelected}/>
                 <span className="tip-percent-options custom-option">
-                    <input type="text" placeholder="Custom" value={ is_custom_value ? value : '' } onChange={changeValue} onClick={resetTipPercent}/>
+                    <input type="number" placeholder="Custom" value={ is_custom_value ? value : '' } onChange={changeValue} onClick={resetTipPercent}/>
                 </span>
             </div>
         </div>
