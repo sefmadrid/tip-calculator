@@ -8,10 +8,6 @@ header {
   min-height: 150px;
 }
 
-#calculator .tip-percent-options.radio-option label, #calculator input {
-  font-size: 24px;
-}
-
 #calculator {
   background: white;
   padding: 30px;
@@ -24,15 +20,15 @@ header {
   margin-bottom: 30px;
 }
 
+#calculator label {
+  font-weight: 700;
+}
+
 #calculator .field > label{
   margin-bottom: 10px;
   display: block;
   font-size: 14px;
-}
-
-#calculator label {
   color: color.$dark-grayish-cyan-1;
-  font-weight: 700;
 }
 
 #calculator input[type="number"] {
@@ -47,15 +43,7 @@ header {
   font-weight: 700;
   box-sizing: border-box;
   cursor: pointer;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
+  font-size: 24px;
   -moz-appearance: textfield;
 }
 
@@ -67,6 +55,38 @@ input[type=number] {
 #calculator input[type="number"]:focus{
   border: 2px color.$strong-cyan solid;
   outline: none;
+}
+
+#calculator input[type="number"].zero_value {
+  border-color: color.$error;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.icon-input {
+  display: block;
+  position: relative;
+}
+
+.icon-input .icon{
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  height: 15px;
+}
+
+.icon-input .error {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  font-size: 14px;
+  color: color.$error;
+  font-weight: 700;
 }
 
 #calculator #tip-percent-options-group {
@@ -99,6 +119,7 @@ input[type=number] {
   align-content: center;
   justify-content: center;
   line-height: 50px;
+  font-size: 24px;
   cursor: pointer;
 }
 
@@ -112,30 +133,9 @@ input[type=number] {
   color: color.$black;
 }
 
-.icon-input {
-  display: block;
-  position: relative;
-}
-
-.icon-input .icon{
-  display: block;
-  position: absolute;
-  top: 13px;
-  left: 13px;
-  height: 15px;
-}
-
-#calculator input[type="number"].zero_value {
-  border-color: color.$error;
-}
-
-.icon-input .error {
-  position: absolute;
-  top: -30px;
-  right: 0;
-  font-size: 14px;
-  color: color.$error;
-  font-weight: 700;
+#calculator #tip-percent-options-group .tip-percent-options:nth-child(5),
+#calculator #tip-percent-options-group .tip-percent-options:nth-child(6){
+  margin-bottom: 0;
 }
 
 #calculator #total{
@@ -146,10 +146,6 @@ input[type=number] {
   flex-direction: column;
 }
 
-#calculator #total #total-section{
-  flex-grow: 1;
-}
-
 #calculator #total .text{
   color: color.$white;
   font-weight: 700;
@@ -158,6 +154,10 @@ input[type=number] {
 #calculator #total .text small{
   display: block;
   color: color.$dark-grayish-cyan-2;
+}
+
+#calculator #total #total-section{
+  flex-grow: 1;
 }
 
 #calculator #total .total-section {
@@ -192,11 +192,6 @@ input[type=number] {
   background: color.$mosque;
 }
 
-#calculator #tip-percent-options-group .tip-percent-options:nth-child(5),
-#calculator #tip-percent-options-group .tip-percent-options:nth-child(6){
-  margin-bottom: 0;
-}
-
 @media(min-width:900px){
   header {
     margin: 100px auto 50px auto;
@@ -217,7 +212,7 @@ input[type=number] {
 
   #calculator #tip-percent-options-group .tip-percent-options label,
   #calculator #tip-percent-options-group .tip-percent-options input{
-    font-size: 18px;
+    font-size: 18px !important;
     height: 40px !important;
     line-height: 40px !important;
   }
