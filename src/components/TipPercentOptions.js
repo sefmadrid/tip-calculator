@@ -18,8 +18,9 @@ const TipPercentOptions = ({
         }
     }
 
-    const fixedValueSelected = () => {
+    const fixedValueSelected = (e) => {
         setIfCustomValue(false)
+        changeValue(e)
     }
 
     return (
