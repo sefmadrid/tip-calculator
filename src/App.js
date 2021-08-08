@@ -19,7 +19,7 @@ const App = () => {
     const [total_per_person, setTotalPerPerson] = useState('0.00');
 
     useEffect(() => {
-        setTipPerPerson(computeTipPerPerson(bill, isNaN(tip_percent) ? 0 : tip_percent, number_of_people))
+        setTipPerPerson(computeTipPerPerson(bill, isNaN(Number(tip_percent)) ? 0 : tip_percent, number_of_people))
         setTotalPerPerson(computeTotalPerPerson(bill, tip_per_person, number_of_people))
     }, [bill, tip_percent, number_of_people, tip_per_person])
 
