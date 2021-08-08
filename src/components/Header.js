@@ -4,7 +4,7 @@ const Header = ({
     logo
 }) => {
     return (
-        <header>
+        <header role="banner">
             <img src={logo} alt="Logo" />
         </header>
     )

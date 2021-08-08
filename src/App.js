@@ -40,7 +40,7 @@ const App = () => {
     return (
         <div className="App">
             <Header logo={logo}/>
-            <div id="calculator">
+            <div id="calculator" role="main">
                 <div id="input">
                     <IconInput icon={dollarIcon} label="Bill" id="bill" name="bill" placeholder="0" value={bill} onChange={setBill} alt="Dollar sign"/>
                     <TipPercentOptions value={tip_percent} onChange={setTipPercent}/>
