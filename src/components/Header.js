@@ -5,7 +5,7 @@ const Header = ({
 }) => {
     return (
         <header role="banner">
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="A logo for Splitter." />
         </header>
     )
 }
