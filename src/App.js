@@ -9,7 +9,7 @@ import Header from './components/Header';
 import IconInput from './components/IconInput';
 import TotalSection from "./components/TotalSection";
 import TipPercentOptions from "./components/TipPercentOptions";
-import {isValueNegative, isValueZero} from "./library/number";
+import {isValueInvalid} from "./library/number";
 
 const App = () => {
     const [bill, setBill] = useState('');
@@ -31,7 +31,7 @@ const App = () => {
     }
 
     const computeTipPerPerson = (bill, tip_percent, number_of_people) => {
-        if(isValueZero(bill) || isValueZero(number_of_people) || isValueZero(tip_percent) || isValueNegative(bill) || isValueNegative(tip_percent) || isValueNegative(number_of_people))
+        if(isValueInvalid(bill) || isValueInvalid(number_of_people) || isValueInvalid(tip_percent))
         {
             return "0.00"
         }
@@ -40,7 +40,7 @@ const App = () => {
     }
 
     const computeTotalPerPerson = (bill, tip_per_person, number_of_people) => {
-        if(isValueZero(bill) || isValueZero(number_of_people) || isValueZero(tip_per_person) || isValueNegative(bill) || isValueNegative(tip_per_person) || isValueNegative(number_of_people))
+        if(isValueInvalid(bill) || isValueInvalid(number_of_people) || isValueInvalid(tip_per_person))
         {
             return "0.00"
         }
